@@ -1,5 +1,7 @@
 addict>=2.4.0
 boxmot==10.0.72
+cython_bbox==0.1.5
+einops==0.8.0
 fairscale==0.4.13
 numpy>=1.24.4
 onnx>=1.16.1
