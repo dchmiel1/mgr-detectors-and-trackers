@@ -4,9 +4,9 @@ from pathlib import Path
 import cv2
 from boxmot import DeepOCSORT, BoTSORT
 
-from traffic_counter.detectors.co_detr.co_detr_adapter import CODETRAdapter
-from traffic_counter.detectors.rt_detr.rt_detr_adapter import RTDETRAdapter
-from traffic_counter.detectors.yolov6.yolov6_adapter import YOLOv6Adapter
+from traffic_counter.detectors.co_detr.co_detr_adapter import CODETRAdapter as CODETR
+from traffic_counter.detectors.rt_detr.rt_detr_adapter import RTDETRAdapter as RTDETR
+from traffic_counter.detectors.yolov6.yolov6_adapter import YOLOv6Adapter as YOLOv6
 from traffic_counter.trackers.smiletrack.smiletrack import SMILEtrack
 from traffic_counter.tracks_exporter import (
     BoTSORTTracksExporter,
@@ -15,9 +15,9 @@ from traffic_counter.tracks_exporter import (
 )
 
 detectors_map = {
-    "yolov6": YOLOv6Adapter,
-    "rt-detr": RTDETRAdapter,
-    "co-detr": CODETRAdapter,
+    "yolov6": YOLOv6,
+    "rt-detr": RTDETR,
+    "co-detr": CODETR,
 }
 
 trackers_map = {
@@ -46,7 +46,7 @@ def main(opt):
 
     detector = detector_class()
     tracker = tracker_class(
-        model_weights=Path("osnet_x0_25_msmt17.pt"),
+        model_weights=Path("weights/osnet_x0_25_msmt17.pt"),
         device="cuda:0",
         fp16=False,
     )

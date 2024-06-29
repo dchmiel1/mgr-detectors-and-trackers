@@ -1,6 +1,6 @@
 import numpy as np
 
-from traffic_counter.abstract_detector_adapter import DetectorAdapter
+from traffic_counter.detectors.abstract_detector_adapter import DetectorAdapter
 from traffic_counter.detectors.yolov6.yolov6.core.inferer import (
     Inferer as YOLOv6Inferer,
 )

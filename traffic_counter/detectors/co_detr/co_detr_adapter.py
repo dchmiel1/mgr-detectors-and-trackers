@@ -1,6 +1,6 @@
 import numpy as np
 
-from traffic_counter.abstract_detector_adapter import DetectorAdapter
+from traffic_counter.detectors.abstract_detector_adapter import DetectorAdapter
 from traffic_counter.detectors.co_detr.mmdet.apis import (
     inference_detector,
     init_detector as init_codetr_detector,
