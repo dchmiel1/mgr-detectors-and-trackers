@@ -209,7 +209,7 @@ class BoTSORTTracksExporter(TracksExporter):
                 return
 
             tracking_record = TrackRecord(
-                tr.cls, tr.conf, tr.history_observations[-1], frame_id, tr.id
+                tr.cls, tr.conf, tr.history_observations[-1], frame_id, tr.track_id
             )
             self.tracking_records.append(tracking_record)
 

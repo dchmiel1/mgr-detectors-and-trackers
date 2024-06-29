@@ -70,7 +70,7 @@ def track(opt):
         img_size = [640, 640]
 
         inferer = Inferer(None, weights, device, yaml, img_size, half)
-    elif opt.detector == "rt=detr":
+    elif opt.detector == "rt-detr":
         inferer = RTDETR("rtdetr-x.pt")
     elif opt.detector == "co-detr":
         checkpoint = "traffic_counter/detectors/co_detr/checkpoints/co_dino_5scale_swin_large_3x_coco.pth"
