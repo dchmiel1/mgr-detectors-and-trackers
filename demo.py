@@ -11,7 +11,7 @@ from traffic_counter.trackers.smiletrack.smiletrack import SMILEtrack
 from traffic_counter.tracks_exporter import (
     BoTSORTTracksExporter,
     DeepOCSORTTracksExporter,
-    SMILEtrackTracksExporter,
+    SMILETrackTracksExporter,
 )
 
 detectors_map = {
@@ -29,7 +29,7 @@ trackers_map = {
 exporter_map = {
     "deep-oc-sort": DeepOCSORTTracksExporter,
     "bot-sort": BoTSORTTracksExporter,
-    "smiletrack": SMILEtrackTracksExporter,
+    "smiletrack": SMILETrackTracksExporter,
 }
 
 
