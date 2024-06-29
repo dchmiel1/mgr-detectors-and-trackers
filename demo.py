@@ -17,7 +17,7 @@ from traffic_counter.trackers.smiletrack.smiletrack import SMILEtrack
 from traffic_counter.detectors.yolov6.yolov6.core.inferer import Inferer
 from ultralytics import RTDETR
 
-from tracks_exporter import (
+from traffic_counter.tracks_exporter import (
     BoTSORTTracksExporter,
     DeepOCSORTTracksExporter,
     SMILEtrackTracksExporter,
